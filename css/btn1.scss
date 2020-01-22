@@ -1,0 +1,78 @@
+/* button style */
+.btn {
+	box-shadow: none;
+    background-color: $primary-color;
+    -moz-user-select: none;
+    border: medium none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 8px 40px;
+    text-align: center;
+    text-transform: capitalize;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(0px);
+}
+.btn:hover {
+    color: #fff;
+}
+
+/* For a sliding white effect*/
+.btn:before {
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 90px;
+    left: -80%;
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .56) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transition: 0ms ease all;
+    -moz-transition: 0ms ease all;
+    transition: 0ms ease all;
+    opacity: .5;
+}
+
+.btn:hover:before {
+    left: 110%;
+    -webkit-transition: 800ms ease all;
+    -moz-transition: 800ms ease all;
+    transition: 800ms ease all;
+    opacity: .2;
+}
+
+/* for a sliding hover effect */
+/* .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #13287e;
+    -webkit-transform: translateX(-101%);
+	transform: translateX(-101%);
+	transition: .5s;
+	z-index: -1;
+}
+.btn:hover::after {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+} */

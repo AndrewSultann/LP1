@@ -1,0 +1,126 @@
+#floating-number {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    color: #fff;
+    padding: 0 0 20px 20px;
+    .holder {
+        padding: 10px 15px;
+        border-radius: 6px;
+        text-shadow: 0 -1px 1px rgba(0, 0, 0, .5);
+        -webkit-transition: all 350ms ease-in-out 0;
+        -moz-transition: all 350ms ease-in-out 0;
+        -ms-transition: all 350ms ease-in-out 0;
+        -o-transition: all 350ms ease-in-out 0;
+        transition: all 350ms ease-in-out 0;
+        background-color: rgba(16, 109, 228, 0.7);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, .2);
+        -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, .2);
+        -wenkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, .2);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 10px rgba(0, 0, 0, .2);
+        display: inline-block
+    }
+
+    a {
+        display: block;
+        border-radius: 6px;
+        color: #fff;
+        text-decoration: none
+    }
+
+    a:hover .holder {
+        color: #fff;
+        background-color: #353d42
+    }
+
+    a:active .holder {
+        background-color: #231f20;
+        box-shadow: inset 0 2px 4px #231f20;
+        color: #fff
+    }
+
+    a:hover .holder h3,
+    #navbar a:active .holder {
+        color: #fff
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 5px;
+        padding-left: 2px;
+        font-weight: 600
+    }
+
+    h3 {
+        color: #fff;
+        font-size: 40px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    h3 i{
+        transform: rotate(-45deg);
+        font-size: 31px;
+}
+}
+@keyframes glowing {
+    0%,
+    100% {
+        background-color: #00a8d7;
+        box-shadow: 0 0 2px #00a8d7
+    }
+    50% {
+        background-color: #0369a9;
+        box-shadow: 0 0 8px #0369a9
+    }
+}
+
+@keyframes glowing2 {
+    0%,
+    100% {
+        background-color: #00a8d7;
+        box-shadow: 0 0 3px #00a8d7
+    }
+    50% {
+        background-color: #0369a9;
+        box-shadow: 0 0 10px #0369a9
+    }
+}
+
+.flushy {
+    animation: glowing 1000ms infinite
+}
+
+.flushy2 {
+    animation: glowing2 1500ms infinite
+}
+
+@media screen and (max-width: $tablet-endpoint){
+    body{
+        margin-top:89px;
+    }
+    #floating-number {
+        padding: 0;
+        right: 0;
+        top: 0;
+        bottom: auto;
+        .holder, a {
+            border-radius: 0
+        }
+        .holder {
+            width: 100%;
+            text-align: center;
+            padding: 10px 10px;
+        }
+        h3 {
+            font-size: 30px
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-endpoint){
+    body{
+        margin-top: 115px;
+    }
+}

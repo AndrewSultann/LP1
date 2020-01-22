@@ -1,0 +1,46 @@
+/* waved overlay */
+
+.overlay-diagonal:before,.overlay-diagonal:after{
+	content: '';
+	position: relative;
+}
+.overlay-diagonal,.overlay-diagonal:before,.overlay-diagonal:after{
+	width: 100%;
+	height: 100%;
+background: #182848;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+    // Inverse
+    // clip-path: polygon(26% 0%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+	
+}
+
+.overlay-diagonal:before{
+	width: 95%;
+    background: rgba(24, 40, 72, 0.1);  /* fallback for old browsers */
+    width: 95%;
+
+}
+.overlay-diagonal:after{
+	width: 90%;
+    background: #182848;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgba(24, 40, 72, 0.1);  /* fallback for old browsers */
+    width: 90%;
+	// background-color: rgba(237, 28, 37, 0.6);
+
+
+}
+
+@media screen and (max-width: $tablet-endpoint){
+    .overlay-diagonal:before,.overlay-diagonal:after, .overlay-diagonal{
+        width: 100%;
+        clip-path: none;
+    }
+}
